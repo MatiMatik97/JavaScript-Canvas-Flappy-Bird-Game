@@ -12,7 +12,7 @@ class Coin {
 	}
 	
 	collect(bird) {
-		return ((bird.x + bird.size >= this.x && bird.x <= this.x + this.size && bird.y + bird.size >= this.y && bird.y <= this.y + this.size));
+		return (bird.x + bird.size >= this.x && bird.x <= this.x + this.size && bird.y + bird.size >= this.y && bird.y <= this.y + this.size);
 	}
 	
 	offScreen() {
