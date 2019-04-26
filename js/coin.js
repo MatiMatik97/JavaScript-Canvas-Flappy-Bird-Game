@@ -5,10 +5,20 @@ class Coin {
 		this.y = y;
 		this.size = size;
 		this.speed = speed;
+		this.yVel = 0;
+		this.grav = random(0.02, 0.04);
+		this.top = y - random(0.1, 0.5);
+		this.bottom = y + random(0.1, 0.5);
 	}
 	
 	update() {
 		this.x -= this.speed;
+		this.y += this.yVel;
+		this.yVel += this.grav;
+		
+		if((this.y <= this.top && this.grav < 0) || (this.y >= this.bottom && this.grav > 0)) {
+			this.grav = (-1) * this.grav;
+		}
 	}
 	
 	collect(bird) {
