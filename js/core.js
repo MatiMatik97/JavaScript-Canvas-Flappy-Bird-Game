@@ -146,7 +146,7 @@ function game() {
 	
 	////////////		START GAME		////////////
 	if(score == 0) {
-		textDisplayOnCenter("MATI BIRD!");
+		textDisplayOnCenter("MATT BIRD!");
 	}
 	
 	////////////		END GAME		////////////
